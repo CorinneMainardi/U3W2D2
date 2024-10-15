@@ -1,0 +1,15 @@
+<h1>Post Non Attivi!</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- Usa inactivePosts invece di postArr -->
+  <div *ngFor="let post of inactivePosts" class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.body }}</p>
+      </div>
+      <a class="btn btn-primary" [routerLink]="['/detail', post.id]"
+        >Dettagli</a
+      >
+    </div>
+  </div>
+</div>
